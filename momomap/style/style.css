@@ -1,0 +1,201 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.header {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url('../assets/imgs/front_page.jpeg');
+  position: relative;
+  background-position: center;
+  background-size: cover;
+}
+
+nav {
+  display: flex;
+  padding: 2%, 6%;
+  margin-left: 12%;
+  margin-right: 15%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#div {
+  display: flex;
+  align-items: center;
+}
+
+#div h1 {
+  margin-top: 20px;
+  margin-left: -15px;
+  font-size: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  margin-left: 0px;
+}
+
+nav img {
+  width: 60px;
+  margin-left: 150px;
+  margin-top: 25px;
+  margin-right: 20px;
+}
+
+.nav-links {
+  margin-top: 20px;
+  flex: 1;
+  text-align: right;
+}
+
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 30px;
+  padding: 10px;
+  position: relative;
+}
+
+.nav-links ul li a {
+  color: #f7e9e9;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.nav-links ul li a:hover {
+  color: #fff;
+}
+
+.nav-links ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  /* background: #897a79; */
+  display: block;
+  margin: auto;
+  transition: 0.3s;
+}
+
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+
+.text-box {
+  width: 50%;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.text-box h1 {
+  font-size: 62px;
+}
+
+.text-box p {
+  margin: 10px 0 40px;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #f7e9e9;
+}
+
+.link-btn {
+  display: inline-block;
+  margin: -50px;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 12px 34px;
+  font-size: 13px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+}
+
+.link-btn:hover {
+  border: 1px solid rgba(4, 9, 30, 0.7);
+  background: rgba(4, 9, 30, 0.7);
+  transition: 1s;
+}
+
+@media(max-width: 700px) {
+  #div h1 {
+    font-size: 30px;
+    margin-top: 30px;
+  }
+
+  nav img {
+    width: 60px;
+    margin-left: 50px;
+    margin-top: 30px;
+    margin-right: 20px;
+  }
+
+  .text-box h1 a{
+    font-size: 22px;
+  }
+  .text-box p{
+    font-size: 15px;
+    display: none;
+  }
+  
+  .text-box h5::after{
+    content: 'Community created roadmaps, guides and articles to help developers grow in their career.';
+    
+  }
+
+  .text-box h5{
+    font-weight: normal;
+  }
+
+  .link-btn{
+    margin: 15px;
+  }
+
+  .nav-links ul li {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    background: #9CA3A3;
+    color: #fff;
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    right: -200px;
+    text-align: left;
+    z-index: 2;
+    transition: 1s;
+  }
+
+  nav .fa-bars {
+    display: block;
+    color: #fff;
+    margin: 10px;
+    margin-top: 43px;
+    margin-left: 250px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+
+  nav .fa-times {
+    display: block;
+    color: #ffffff;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+
+  .nav-links ul {
+    padding: 30px;
+  }
+}
